@@ -1,0 +1,24 @@
+{
+  "name": "drg-price-lookup",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "KISS local lookup utility for base German DRG amounts.",
+  "license": "MIT",
+  "bin": {
+    "drg-price-lookup": "./dist/src/cli.js"
+  },
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
+    "check": "npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.0"
+  }
+}

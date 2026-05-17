@@ -1,0 +1,24 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# OS/editor/local files
+.DS_Store
+.pi/
+.env
+.env.*
+*.pem
+*.key
+
+# Local agent and planning artifacts
+AGENTS.md
+TASKS.md
+tasks.md
+prompts/
+docs/DRG-PRICER-TAKEOVER.md
+docs/2026-source-inventory.md
+
+# User-supplied official raw files (BYOD). Keep docs/placeholders only.
+data/official/*/raw/**
+!data/official/*/raw/
+!data/official/*/raw/.gitkeep
