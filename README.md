@@ -1,6 +1,6 @@
-# drg-price-lookup
+# drg-pricer
 
-`drg-price-lookup` is an experimental, KISS-first local lookup engine for base German
+`drg-pricer` is an experimental, KISS-first local lookup engine for base German
 DRG/aG-DRG pricing. Given a reimbursement year, a known DRG code, and a
 caller-supplied Landesbasisfallwert (LBFW), it looks up the DRG relative weight in a
 user-supplied official Fallpauschalen-Katalog file and returns
@@ -183,9 +183,9 @@ data/official/2026/raw/Fallpauschalenkatalog_2026_2025-11-19.xlsx
 5. Optional synthetic smoke test without official data:
 
    ```sh
-   mkdir -p /tmp/drg-price-lookup-demo/2025/raw
-   printf 'DRG;Bewertungsrelation\nSYN1;1,234\n' >/tmp/drg-price-lookup-demo/2025/raw/synthetic.csv
-   node dist/src/cli.js --year 2025 --drg SYN1 --lbfw 4000.00 --data-dir /tmp/drg-price-lookup-demo
+   mkdir -p /tmp/drg-pricer-demo/2025/raw
+   printf 'DRG;Bewertungsrelation\nSYN1;1,234\n' >/tmp/drg-pricer-demo/2025/raw/synthetic.csv
+   node dist/src/cli.js --year 2025 --drg SYN1 --lbfw 4000.00 --data-dir /tmp/drg-pricer-demo
    ```
 
 This is experimental software. It performs only the base lookup formula and does not group cases,
@@ -242,7 +242,7 @@ npm run check      # typecheck, then run the full test suite
 
 ## Documentation
 
-- [Product philosophy](drg-price-lookup-product-philosophy.md)
+- [Product philosophy](drg-pricer-product-philosophy.md)
 - [Post-MVP functions investigation](docs/post-mvp-functions-investigation.md)
 - [ADR index](docs/adr/README.md)
 - [ADR 0001: KISS base DRG lookup boundary](docs/adr/0001-adopt-kiss-base-drg-lookup-boundary.md)
@@ -250,5 +250,5 @@ npm run check      # typecheck, then run the full test suite
 
 ## Safety note
 
-`drg-price-lookup` is experimental software. It is not certified billing software and must not be
+`drg-pricer` is experimental software. It is not certified billing software and must not be
 used as the sole basis for claims, reimbursement decisions, or legal compliance.

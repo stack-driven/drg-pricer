@@ -1,8 +1,8 @@
-# drg-price-lookup product philosophy
+# drg-pricer product philosophy
 
 ## Purpose
 
-`drg-price-lookup` should be a small deterministic lookup-and-calculation engine for already-grouped German DRG/aG-DRG inpatient cases.
+`drg-pricer` should be a small deterministic lookup-and-calculation engine for already-grouped German DRG/aG-DRG inpatient cases.
 
 The core product promise is:
 
@@ -243,7 +243,7 @@ Do not create ADRs for future ZE/NUB/Pflege/LOS support until those slices are a
 - Example:
 
 ```bash
-drg-price-lookup price --year 2026 --drg B79Z --lbfw 4200.00 --data ./data/official
+drg-pricer price --year 2026 --drg B79Z --lbfw 4200.00 --data ./data/official
 ```
 
 - Output stable JSON.
